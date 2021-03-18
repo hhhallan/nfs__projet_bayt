@@ -15,7 +15,8 @@ $page = $_GET["page"];
 
 switch ($page) {
     case 'home':
-        require '../App/Views/home.php';
+        $home = new HomeController();
+        $home->home();
         break;
     default:
         require '../App/Views/default.php';
