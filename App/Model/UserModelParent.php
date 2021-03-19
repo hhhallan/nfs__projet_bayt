@@ -27,6 +27,9 @@ class UserModelParent extends Model{
     public function getUserByEmail(string $email):object
     {
         $statement = "SELECT * FROM user_part WHERE email = '$email'";
+
+        $statement = "SELECT * FROM user_part WHERE email = $email";
+
         return $this->db->getData($statement, true);
     }
 } 

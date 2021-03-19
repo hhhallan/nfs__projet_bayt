@@ -30,3 +30,6 @@ class UserModelPro extends Model{
         return $this->db->getData($statement, true);
     }
 }
+
+}
+

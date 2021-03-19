@@ -51,9 +51,7 @@ class Model{
      */
     public function readAll():array
     {
-
         return $this->db->getData("SELECT * FROM $this->table");
-
     }
 
     /**
