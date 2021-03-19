@@ -53,7 +53,7 @@ class UserController extends Controller
                 $error = "Utilisateur ou mot de passe incorrect.";
             }
         }
-        /* $this->render("auth.login"); */
+        $this->render("auth.login");
     }
 
     public function logout()
