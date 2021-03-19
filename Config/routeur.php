@@ -3,6 +3,8 @@
 /**
  * Mettre les use des class
  */
+use App\Controller\HomeController;
+use App\Controller\UserControllerPro;
 
 /**
  * Si page est vide => on revient sur la home

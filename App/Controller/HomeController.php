@@ -2,23 +2,20 @@
 
 namespace App\Controller;
 
-//use App\Model\UserModel;
+use Core\Controller\Controller;
+use App\Model\UserModelPro;
 
-/*class HomeController extends Controller {
+class HomeController extends Controller {
 
-    public function __construct()
-    {
-        $this->userModel = new UserModelPro();
-    }
 
     public function home() {
-        $userModel = new UserModelPro();
 
-        $proUsers = userModel->readAll();
-        var_dump($proUsers);
+        $userControllerPro = new UserControllerPro();
+//        $proUsers = $userControllerPro->();
+        debug($proUsers);
 
         foreach ($proUsers as $proUser) {
-            echo ''cc
+            debug($proUser);
         }
 
         $this->render("home", [
@@ -26,4 +23,10 @@ namespace App\Controller;
         ]);
     }
 
-}*/
+}
+function debug($tableau)
+{
+    echo '<pre>';
+    print_r($tableau);
+    echo '</pre>';
+}

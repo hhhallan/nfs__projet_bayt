@@ -8,7 +8,6 @@ class Controller{
     {
         $encoded=[];
         foreach ($data as $key => $element) {
-
             $encoded[$key] = htmlspecialchars($element);
         }
         return $encoded;
