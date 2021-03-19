@@ -7,7 +7,7 @@ class Autoloader{
     public static function autoload($class)
     {
         $class = str_replace('\\', '/', $class);
-        require ROOT."$class.php";
+        require_once ROOT."$class.php";
     }
 
     public static function register()

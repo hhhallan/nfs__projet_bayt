@@ -4,11 +4,10 @@ namespace Core\Controller;
 
 class Controller{
 
-    /*public function encodeChars($data)
+    public function encodeChars($data)
     {
         $encoded=[];
         foreach ($data as $key => $element) {
-
             $encoded[$key] = htmlspecialchars($element);
         }
         return $encoded;
@@ -22,5 +21,5 @@ class Controller{
         require ROOT."App/Views/$pathView.php";
         $content = ob_get_clean();
         require ROOT."App/Views/default.php";
-    }*/
+    }
 }
