@@ -22,6 +22,7 @@ class UserController extends Controller
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
             $this->userModelParent->create($user);
+
         }
 
         $this->render("auth.signup_parent");
@@ -34,6 +35,7 @@ class UserController extends Controller
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
             $this->userModelPro->create($user);
+
         }
 
         $this->render("auth.signup_pro");
@@ -61,6 +63,7 @@ class UserController extends Controller
         session_destroy();
         header("Location:index.php");
     }
+
     public function getAllPro()
     {
         return $this->userModelPro->ReadAll();
@@ -71,3 +74,13 @@ class UserController extends Controller
         return $this->userModelParent->ReadAll();
     }
 }
+
+    public function getAllPro() {
+        return $this->userModelPro->ReadAll();
+    }
+
+    public function getAllParent() {
+        return $this->userModelParent->ReadAll();
+    }
+}
+

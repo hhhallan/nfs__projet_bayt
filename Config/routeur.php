@@ -3,6 +3,8 @@
 /**
  * Mettre les use des class
  */
+use App\Controller\HomeController;
+use App\Controller\UserController;
 
 /**
  * Si page est vide => on revient sur la home
@@ -21,7 +23,9 @@ use App\Controller\UserController;
 
 switch ($page) {
     case 'home':
-        require '../App/Views/home.php';
+        $home = new HomeController();
+        $home->home();
+//        require '../App/Views/home.php';
         break;
     case "login":
         $user = new UserController();

@@ -29,4 +29,8 @@ class UserModelPro extends Model{
         $statement = "SELECT * FROM user_pro WHERE email = $email";
         return $this->db->getData($statement, true);
     }
+
 }
+
+}
+

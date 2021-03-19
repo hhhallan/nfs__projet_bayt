@@ -1,7 +1,7 @@
 <?php
 
 $config = [
-    "dbName" => "byat",
+    "dbName" => "bayt",
     "dbHost" => "localhost",
     "dbUser" => "root",
     "dbPassword" => ""
