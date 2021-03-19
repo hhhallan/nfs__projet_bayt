@@ -3,30 +3,28 @@
 namespace App\Controller;
 
 use Core\Controller\Controller;
-use App\Model\UserModelPro;
 
 class HomeController extends Controller {
 
 
-    public function home() {
+    public function home()
+    {
+        $userControllerPro = new UserController();
+        $proUsers = $userControllerPro->getAllPro();
+        echo '<pre>';
+        print_r($proUsers);
+        echo '</pre>';
 
-        $userControllerPro = new UserControllerPro();
-//        $proUsers = $userControllerPro->();
-        debug($proUsers);
-
-        foreach ($proUsers as $proUser) {
-            debug($proUser);
-        }
+        /*foreach ($proUsers as $proUser) {
+            echo $proUser->prenom;
+            echo $proUser->nom;
+            echo $proUser->email;
+            echo $proUser->tel_fixe;
+        }*/
 
         $this->render("home", [
             "proUsers" => $proUsers
         ]);
     }
+}
 
-}
-function debug($tableau)
-{
-    echo '<pre>';
-    print_r($tableau);
-    echo '</pre>';
-}

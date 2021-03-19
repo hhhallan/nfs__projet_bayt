@@ -65,4 +65,12 @@ class UserController extends Controller{
         session_destroy();
         header("Location:index.php");
     }
+
+    public function getAllPro() {
+        return $this->userModelPro->ReadAll();
+    }
+
+    public function getAllParent() {
+        return $this->userModelParent->ReadAll();
+    }
 }
