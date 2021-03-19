@@ -1,15 +1,16 @@
 <?php
 namespace App\Controller;
 
-use App\Model\ArticleModel;
-use App\Model\UserModel;
+use App\Model\UserModelParent;
+use App\Model\UserModelPro;
 use Core\Controller\Controller;
 
 class UserController extends Controller{
 
     public function __construct()
     {
-        $this->userModel = new UserModel();
+        $this->userModelParent = new UserModelParent();
+        $this->userModelPro = new UserModelPro();
     }
 
     public function signup_parent($data)
@@ -18,7 +19,7 @@ class UserController extends Controller{
             $user = $this->encodeChars($data);
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
-            $this->userModel->create($user);
+            $this->userModelParent->create($user);
 
         }
 
@@ -32,7 +33,7 @@ class UserController extends Controller{
             $user = $this->encodeChars($data);
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
-            $this->userModel->create($user);
+            $this->userModelPro->create($user);
 
         }
 
@@ -44,7 +45,7 @@ class UserController extends Controller{
     {
         if (isset($data["email"])) {
 
-            $user = $this->userModel->getUserByEmail($data["email"]);
+            $user = $this->userModelPro->getUserByEmail($data["email"]);
 
             if ($user && password_verify($data["password"], $user->password)) {
                 $_SESSION["user"] = $user;
@@ -63,5 +64,13 @@ class UserController extends Controller{
     {
         session_destroy();
         header("Location:index.php");
+    }
+
+    public function getAllPro() {
+        return $this->userModelPro->ReadAll();
+    }
+
+    public function getAllParent() {
+        return $this->userModelParent->ReadAll();
     }
 }

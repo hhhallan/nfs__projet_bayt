@@ -2,28 +2,29 @@
 
 namespace App\Controller;
 
-//use App\Model\UserModel;
+use Core\Controller\Controller;
 
-/*class HomeController extends Controller {
+class HomeController extends Controller {
 
-    public function __construct()
+
+    public function home()
     {
-        $this->userModel = new UserModelPro();
-    }
+        $userControllerPro = new UserController();
+        $proUsers = $userControllerPro->getAllPro();
+        echo '<pre>';
+        print_r($proUsers);
+        echo '</pre>';
 
-    public function home() {
-        $userModel = new UserModelPro();
-
-        $proUsers = userModel->readAll();
-        var_dump($proUsers);
-
-        foreach ($proUsers as $proUser) {
-            echo ''cc
-        }
+        /*foreach ($proUsers as $proUser) {
+            echo $proUser->prenom;
+            echo $proUser->nom;
+            echo $proUser->email;
+            echo $proUser->tel_fixe;
+        }*/
 
         $this->render("home", [
             "proUsers" => $proUsers
         ]);
     }
+}
 
-}*/
