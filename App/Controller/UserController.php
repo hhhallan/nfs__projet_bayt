@@ -2,14 +2,14 @@
 namespace App\Controller;
 
 use App\Model\ArticleModel;
-use App\Model\UserModel;
+use App\Model\UserModelParent;
 use Core\Controller\Controller;
 
 class UserController extends Controller{
 
     public function __construct()
     {
-        $this->userModel = new UserModel();
+        $this->userModel = new UserModelParent();
     }
 
     public function signup_parent($data)
@@ -55,7 +55,7 @@ class UserController extends Controller{
             }
             
         }
-        $this->render("auth.login");
+        /* $this->render("auth.login"); */
 
     }
 
