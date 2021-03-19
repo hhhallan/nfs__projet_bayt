@@ -1,15 +1,18 @@
 <?php
+
 namespace App\Controller;
 
-use App\Model\ArticleModel;
 use App\Model\UserModelParent;
+use App\Model\UserModelPro;
 use Core\Controller\Controller;
 
-class UserController extends Controller{
+class UserController extends Controller
+{
 
     public function __construct()
     {
-        $this->userModel = new UserModelParent();
+        $this->userModelParent = new UserModelParent();
+        $this->userModelPro = new UserModelPro();
     }
 
     public function signup_parent($data)
@@ -18,12 +21,10 @@ class UserController extends Controller{
             $user = $this->encodeChars($data);
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
-            $this->userModel->create($user);
-
+            $this->userModelParent->create($user);
         }
 
         $this->render("auth.signup_parent");
-
     }
 
     public function signup_pro($data)
@@ -32,19 +33,17 @@ class UserController extends Controller{
             $user = $this->encodeChars($data);
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
-            $this->userModel->create($user);
-
+            $this->userModelPro->create($user);
         }
 
         $this->render("auth.signup_pro");
-
     }
 
     public function login($data)
     {
         if (isset($data["email"])) {
 
-            $user = $this->userModel->getUserByEmail($data["email"]);
+            $user = $this->userModelPro->getUserByEmail($data["email"]);
 
             if ($user && password_verify($data["password"], $user->password)) {
                 $_SESSION["user"] = $user;
@@ -53,15 +52,22 @@ class UserController extends Controller{
             } else {
                 $error = "Utilisateur ou mot de passe incorrect.";
             }
-            
         }
         /* $this->render("auth.login"); */
-
     }
 
     public function logout()
     {
         session_destroy();
         header("Location:index.php");
+    }
+    public function getAllPro()
+    {
+        return $this->userModelPro->ReadAll();
+    }
+
+    public function getAllParent()
+    {
+        return $this->userModelParent->ReadAll();
     }
 }
