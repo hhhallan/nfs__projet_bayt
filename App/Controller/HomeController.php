@@ -26,5 +26,13 @@ class HomeController extends Controller {
             "proUsers" => $proUsers
         ]);
     }
+
+    public function about() {
+        $this->render('about');
+    }
+
+    public function us() {
+        $this->render('us');
+    }
 }
 

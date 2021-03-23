@@ -22,10 +22,14 @@ switch ($page) {
 //        require '../App/Views/home.php';
         break;
     case 'about':
-        require '../App/Views/about.php';
+        $about = new HomeController();
+        $about->about();
+//        require '../App/Views/about.php';
         break;
     case 'us':
-        require '../App/Views/us.php';
+        $us = new HomeController();
+        $us->us();
+//        require '../App/Views/us.php';
         break;
     default:
         require '../App/Views/default.php';
