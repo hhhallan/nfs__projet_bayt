@@ -11,9 +11,9 @@ class HomeController extends Controller {
     {
         $userControllerPro = new UserController();
         $proUsers = $userControllerPro->getAllPro();
-        echo '<pre>';
+        /*echo '<pre>';
         print_r($proUsers);
-        echo '</pre>';
+        echo '</pre>';*/
 
         /*foreach ($proUsers as $proUser) {
             echo $proUser->prenom;

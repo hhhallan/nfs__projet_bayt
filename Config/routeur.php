@@ -21,6 +21,12 @@ switch ($page) {
         $home->home();
 //        require '../App/Views/home.php';
         break;
+    case 'about':
+        require '../App/Views/about.php';
+        break;
+    case 'us':
+        require '../App/Views/us.php';
+        break;
     default:
         require '../App/Views/default.php';
         break;
