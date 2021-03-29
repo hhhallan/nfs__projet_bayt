@@ -31,6 +31,17 @@ switch ($page) {
         $us->us();
 //        require '../App/Views/us.php';
         break;
+    case 'registration_parent':
+        require '../App/Views/auth/signup_parent.php';
+        break;
+    case 'registration_pro':
+        $user = new UserController();
+        $user->signup_pro($_POST);
+        break;
+    case 'login_pro':
+        $user = new UserController();
+        $user->login_pro($_POST);
+        break;
     default:
         require '../App/Views/default.php';
         break;

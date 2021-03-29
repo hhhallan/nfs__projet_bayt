@@ -26,7 +26,8 @@
         <a class="navlink" href="index.php?page=us">L'équipe</a>
     </div>
     <div>
-        <a id="loginbtn" class="navlink" href="">Log in / Sign up</a>
+        <a id="loginbtn" class="navlink" href="index.php?page=signup_parent">PARENT</a>
+        <a class="navlink" href="index.php?page=registration_pro">PRO</a>
     </div>
 </header>
 

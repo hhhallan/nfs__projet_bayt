@@ -62,7 +62,6 @@ class Model{
      */
     public function readOne(int $id):object
     {
-
         return $this->db->getData("SELECT * FROM $this->table WHERE id = $id", true);
     }
 
@@ -76,5 +75,16 @@ class Model{
     {
         $statement = "DELETE FROM $this->table WHERE id = $id";
         $this->db->postData($statement);
+    }
+
+    /**
+     * Récupère l'id d'un utilisateur en fonction de son email
+     *
+     * @param string $string
+     * @return object
+     */
+    public function getIdByMail(string $string)
+    {
+        return $this->db->getData("SELECT id FROM $this->table WHERE email = '$string'");
     }
 }
