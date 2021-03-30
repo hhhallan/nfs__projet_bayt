@@ -10,24 +10,13 @@ use Core\Model\Model;
  * @method create($data) | Enregistre un utilisateur dans la BDD
  * @method getIdByMail(string $string) | Récupère l'id d'un utilisateur en fonction de son email
  */
-class UserModelParent extends Model{
+class LocalisationModel extends Model{
 
     /**
      * Nom de la table
      *
      * @var string
      */
-    protected $table = "user_part";
-    
-    /**
-     * Récupère un utilisateur en fonction de son email
-     *
-     * @param string $email
-     * @return object
-     */
-    public function getUserByEmail(string $email):object
-    {
-        $statement = "SELECT * FROM user_part WHERE email = '$email'";
-        return $this->db->getData($statement, true);
-    }
-} 
+    protected $table = "user_pro";
+
+}

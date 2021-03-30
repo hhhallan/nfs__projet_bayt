@@ -1,9 +1,11 @@
 <?php
+
 namespace Core\Model;
 
 use Core\Database\Database;
 
-class Model{
+class Model
+{
 
     /**
      * Nom de la table
@@ -33,10 +35,10 @@ class Model{
         $statement = "INSERT INTO $this->table (";
         $values = "VALUES (";
         foreach ($data as $key => $value) {
-            $statement .= $key .",";
-            $values .= "'". $value ."',";
+            $statement .= $key . ",";
+            $values .= "'" . $value . "',";
         }
-        $statement = substr($statement,0,-1) . ") ";
+        $statement = substr($statement, 0, -1) . ") ";
         $values = substr($values, 0, -1) . ")";
 
         $statement .= $values;
@@ -49,7 +51,7 @@ class Model{
      *
      * @return array
      */
-    public function readAll():array
+    public function readAll(): array
     {
         return $this->db->getData("SELECT * FROM $this->table");
     }
@@ -60,7 +62,7 @@ class Model{
      * @param integer $id
      * @return object
      */
-    public function readOne(int $id):object
+    public function readOne(int $id): object
     {
         return $this->db->getData("SELECT * FROM $this->table WHERE id = $id", true);
     }

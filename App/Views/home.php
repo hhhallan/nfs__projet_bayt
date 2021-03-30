@@ -11,9 +11,8 @@
 
 
 <?php
-/*echo '<pre>';
-print_r($proUsers);
-echo '</pre>';*/
+
+
 foreach ($proUsers as $proUser) : ?>
 
     <div class="person">
@@ -35,8 +34,13 @@ foreach ($proUsers as $proUser) : ?>
         <p class="presentationtxt">"Attiré par les enfants depuis ma<br> sortie de prison, je suis devenu<br>
             assistant
             maternel."</p>
+
+        <p><?= $proUser->lat ?></p>
+        <p><?= $proUser->lon ?></p>
     </div>
 </div>
 
 
- <?php endforeach;
+ <?php endforeach; ?>
+
+ <div STYLE="height: 100vh;width: 50%;" id="maCarte"></div>
