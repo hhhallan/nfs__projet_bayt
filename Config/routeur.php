@@ -54,13 +54,21 @@ switch ($page) {
         $user = new UserController();
         $user->login_pro($_POST);
         break;
-    case 'localisation':
+    case 'show':
+        $user = new LocalisationController();
+        $user->show();
+        break;
+    case 'insert':
         $localisation = new LocalisationController();
         $localisation->insert($_POST);
         break;
     case 'logout':
         $user = new UserController();
         $user->logout();
+        break;
+    case 'map':
+        $user = new LocalisationController();
+        $user->showJson();
         break;
     default:
         require '../App/Views/default.php';

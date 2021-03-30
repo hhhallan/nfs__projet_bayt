@@ -19,4 +19,5 @@ class LocalisationModel extends Model{
      */
     protected $table = "user_pro";
 
+
 }

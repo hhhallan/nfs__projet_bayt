@@ -11,7 +11,7 @@ btn.addEventListener('click', function () {
         .then((data) => {
             $.ajax({
                 method: 'POST',
-                url: '../App/Views/ajax/localisation_insert.php',
+                url: 'index.php?page=insert',
                 data: {
                     lat: data[0].lat,
                     lon: data[0].lon

@@ -89,4 +89,14 @@ class Model
     {
         return $this->db->getData("SELECT id FROM $this->table WHERE email = '$string'");
     }
+
+    public function update($loca)
+    {
+        $user = $_SESSION['user'];
+        $id = $_SESSION['user']['id'];
+
+        $statement = "UPDATE user_pro SET lat = ".$loca['lat'].", lon = ".$loca['lon']." WHERE id = '$id'";
+        var_dump($statement);
+         $this->db->postData($statement);
+    }
 }

@@ -1,5 +1,3 @@
-
-
 /* CARTE */
 // Initialisation de la carte
 var carte = L.map('maCarte').setView([49.443232, 1.099971], 12);
@@ -11,13 +9,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {
 }).addTo(carte);
 
 $.ajax({
-    method: 'POST',
-    url: '../App/Views/ajax/map_select.php',
+    method: 'GET',
+    url: 'index.php?page=map',
     dataType: 'JSON',
     data: { },
-    success: function (data) {
+    success: function (res) {
         console.log('success')
+        console.log(res)
     }
 })
 
 // Creer une nouvelle classe echo json_encode(avec les données)  * NE PAS OUBLIER LE HEADER
+

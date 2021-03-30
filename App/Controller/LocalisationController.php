@@ -14,18 +14,37 @@ class LocalisationController extends Controller
         $this->locaModel = new LocalisationModel();
     }
 
+    public function show()
+    {
+        $this->render('localisation');
+    }
+
     public function insert($data)
     {
-        if (!empty($data['lat']) && !empty($data['lon'])) {
+        var_dump($data);
+        $lat = $data['lat'];
+        $lon = $data['lon'];
+        if (!empty($lat) && !empty($lon)) {
             $loca = $this->encodeChars($data);
-            debug('pas vide');
 
-            if (is_numeric($data['lat']) && is_numeric($data['lon'])) {
-                debug('numeric');
-                $this->locaModel->create($loca);
+            if (is_numeric($lat) && is_numeric($lon)) {
+
+                var_dump($lat);
+                $this->locaModel->update($loca);
             }
         }
-        $this->render("localisation");
+    }
+
+    public function showJson()
+    {
+        $data = $this->locaModel->ReadAll();
+        header("content-type: application/json");
+        $json = json_encode($data, JSON_PRETTY_PRINT);
+        if ($json) {
+            die($json);
+        } else {
+            die('error in json encoding');
+        }
     }
 
 }
