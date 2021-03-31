@@ -5,6 +5,7 @@ let search = document.getElementById('location-search');    // Input Adresse
 let btnSearch = document.getElementById('btnSearch');       // Bouton "RECHERCHER"
 let maCarte = document.getElementById('maCarte');           // La carte
 let select = document.getElementById('sitter-select');      // Select Role
+let legende = document.getElementById('legende');           // Légende de la carte
 
 
 var carte = L.map('maCarte'); // On initialise la carte
@@ -23,9 +24,11 @@ btnSearch.addEventListener('click', function () { // Quand on click sur "Rechech
             let lonSearch = data[0].lon;
             maCarte.style.display = 'block';
             window.location = '#maCarte';
+            legende.style.display = 'flex';
             carte.setView([latSearch, lonSearch], 14); // La vue de la carte est définie en fonction de la latitude et longitude de l'adresse rentrée.
         })
-    console.log(select.value) // Affiche la valeur du select
+
+    //console.log(select.value) // Affiche la valeur du select
     /*switch (select.value) {
         case 'selectA':
             break
@@ -124,7 +127,7 @@ $.ajax({ // On récupère les infos en BDD
                 customPopup +=      '</div>';
                 customPopup +=      '<div class="popMidTel">';
                 customPopup +=        '<div class="popMidTelLeft">';
-                customPopup +=          '<p>Tel:</p>';
+                customPopup +=          '<p>Téléphone:</p>';
                 customPopup +=        '</div>';
                 customPopup +=        '<div class="popMidTelRight">';
                 customPopup +=          '<p>0'+e.tel_portable+'</p>';

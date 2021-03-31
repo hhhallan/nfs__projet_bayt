@@ -1,4 +1,4 @@
-<h2>Faire garder votre enfant <br> n'a jamais été aussi simple.</h2>
+<!--<h2>Faire garder votre enfant <br> n'a jamais été aussi simple.</h2>
 
 <div class="search">
     <input type="search" id="location-search" name="q" aria-label="Search through site content"
@@ -13,12 +13,49 @@
 </div>
 <div>
     <a><div id="btnSearch" class="btnsearch">Rechercher</div></a>
+</div>-->
+
+<div class="container">
+    <h2>Faire garder votre enfant <br> n'a jamais été aussi simple.</h2>
+
+    <div class="search">
+        <div class="inputselect">
+            <input type="search" id="location-search" name="q" aria-label="Search through site content"
+                   placeholder="Où cherchez-vous?">
+
+            <select name="sitters" id="sitter-select">
+                <option value="">Que cherchez-vous?</option>
+                <option value="dog">Une crèche</option>
+                <option value="hamster">Un(e) babysitter</option>
+                <option value="cat">Un(e) assistant(e) maternel(le)</option>
+            </select>
+        </div>
+        <div class="boutonrechercher">
+            <a>
+                <div id="btnSearch" class="btnsearch">Rechercher</div>
+            </a>
+        </div>
+    </div>
 </div>
 <?php
 
 
-/*foreach ($proUsers as $proUser) : */?><!--
+/*foreach ($proUsers as $proUser) : */ ?><!--
 
- --><?php /*endforeach; */?>
+ --><?php /*endforeach; */ ?>
 
- <div STYLE="height: 800px;width: 80%;margin: 125px auto;" id="maCarte"></div>
+<div id="legende">
+    <div class="color">
+        <div class="red cc"></div>
+        <p>Assistant(e) maternelle</p>
+    </div>
+    <div class="color">
+        <div class="gold cc"></div>
+        <p>Crèche</p>
+    </div>
+    <div class="color">
+        <div class="violet cc"></div>
+        <p>Baby-sitter</p>
+    </div>
+</div>
+<div id="maCarte"></div>

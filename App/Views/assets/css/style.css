@@ -65,10 +65,15 @@ a {
     text-decoration: none;
 }
 
-header {
-    margin-top: 25px;
+.headercontainer {
     display: flex;
-    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.headercontent {
+    display: flex;
+    justify-content: center;
+    width: 33.3333%;
     align-items: center;
 }
 
@@ -101,7 +106,7 @@ h1 {
 h2 {
     margin: 0 auto;
     margin-top: 130px;
-    margin-left: 570px;
+    /* margin-left: 570px; */
     width: fit-content;
     line-height: 2;
     font-size: x-large;
@@ -109,12 +114,21 @@ h2 {
     user-select: none;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .search {
     margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #sitter-select {
-    margin-left: 100px;
     padding: 6px;
     border-radius: 5px;
     border: 1.5px solid gray;
@@ -122,7 +136,6 @@ h2 {
 
 #location-search {
     text-align: center;
-    margin-left: 500px;
     border-radius: 5px;
     padding: 6px;
     border: 1.5px solid gray;
@@ -133,15 +146,15 @@ h2 {
     color: white;
     width: 120px;
     text-align: center;
-    margin-left: 650px;
     text-decoration: none;
     color: white;
     font-weight: bold;
     background-color: #202020;
     padding: 8px;
     border-radius: 8px;
-    border: 1.5px solid gray;
     transition: 0.45s;
+    border: 1.5px solid gray;
+    user-select: none;
 }
 
 .btnsearch:hover {
@@ -150,8 +163,45 @@ h2 {
     cursor: pointer;
 }
 
+#legende {
+    display: none;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.color {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cc {
+    width: 30px;
+    height: 15px;
+    border-radius: 5px;
+}
+#legende p {
+    margin-left: 25px;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.red {
+    background-color: crimson;
+}
+
+.violet {
+    background-color: #bc47bc;
+}
+
 #maCarte {
     display: none;
+    height: 800px;
+    width: 80%;
+    margin: 50px auto;
 }
 
 
@@ -162,6 +212,7 @@ h2 {
     color: #202020;
     font-weight: bold;
 }
+
 .containerPopup {
     display: flex;
     flex-direction: column;
