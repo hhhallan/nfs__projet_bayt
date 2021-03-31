@@ -1,3 +1,5 @@
+/*  CONVERTISSEUR ADRESSE EN COORDONNEE   */
+
 let adresse = document.getElementById('adresse');
 let ville = document.getElementById('ville');
 let codePostal = document.getElementById('codePostal');
@@ -18,14 +20,14 @@ btn.addEventListener('click', function () {
                 },
                 success: function (e) {
                     console.log('success');
-                    console.log(e)
-                    /*console.log('Latitude: '+e.array.lat);
-                    console.log('Longitude: '+e.array.lon);*/
+                    window.location = 'index.php'
                 },
                 error: function () {
-                    console.log('error');
+                    alert('Erreur')
                 }
             })
         })
 
 })
+
+/*  FIN CONVERTISSEUR   */

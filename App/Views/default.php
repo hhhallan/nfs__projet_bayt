@@ -125,7 +125,7 @@ function isLoggedPro()
 <body>
 <header>
     <div class="burger"><img src="assets/img/burger icon.jpg" alt=""></div>
-    <h1>BAYT</h1>
+    <a href="index.php"><h1 id="bigTitle">BAYT</h1></a>
     <?php if (isLogged()) { ?>
         <a id="loginbtn" class="login" href="index.php?page=logout">DECONNEXION</a>
     <?php } else { ?>

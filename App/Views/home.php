@@ -6,13 +6,13 @@
 
     <select name="sitters" id="sitter-select">
         <option value="">Que cherchez-vous?</option>
-        <option value="dog">Une crèche</option>
-        <option value="hamster">Un(e) babysitter</option>
-        <option value="cat">Un(e) assistant(e) maternel(le)</option>
+        <option value="selectA">Un(e) assistant(e) maternel(le)</option>
+        <option value="selectB">Un(e) babysitter</option>
+        <option value="selectC">Une crèche</option>
     </select>
 </div>
 <div>
-    <a href="#maCarte"><div class="btnsearch">Rechercher</div></a>
+    <a><div id="btnSearch" class="btnsearch">Rechercher</div></a>
 </div>
 <?php
 

@@ -23,25 +23,31 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -49,47 +55,50 @@ table {
 
 /* STYLE DU SITE */
 
-body{
+body {
     background-color: #C0C2DB;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     height: 100%;
 }
 
-header{
+a {
+    text-decoration: none;
+}
+
+header {
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-img{
+img {
     width: 3em;
 }
 
-h1{
-    font-weight:600;
-    /* color: #202020; */
-    color: white;
+h1 {
+    font-weight: 600;
     font-size: xxx-large;
     user-select: none;
+    color: white;
 }
 
-.login{
+.login {
     text-decoration: none;
     color: white;
     font-weight: bold;
     background-color: #202020;
     padding: 8px;
     border-radius: 8px;
-}
-
-.login:hover{
-    background-color: white;
-    color: black;
     transition: 0.45s;
 }
 
-h2{
+.login:hover {
+    background-color: white;
+    color: black;
+}
+
+h2 {
     margin: 0 auto;
     margin-top: 130px;
     margin-left: 570px;
@@ -100,26 +109,26 @@ h2{
     user-select: none;
 }
 
-.search{
+.search {
     margin-top: 70px;
 }
 
-#sitter-select{
+#sitter-select {
     margin-left: 100px;
     padding: 6px;
     border-radius: 5px;
     border: 1.5px solid gray;
 }
 
-#location-search{
-    text-align:center;
+#location-search {
+    text-align: center;
     margin-left: 500px;
     border-radius: 5px;
     padding: 6px;
     border: 1.5px solid gray;
 }
 
-.btnsearch{
+.btnsearch {
     margin-top: 75px;
     color: white;
     width: 120px;
@@ -131,14 +140,66 @@ h2{
     background-color: #202020;
     padding: 8px;
     border-radius: 8px;
+    border: 1.5px solid gray;
+    transition: 0.45s;
 }
 
-.btnsearch:hover{
+.btnsearch:hover {
     color: black;
     background-color: white;
     cursor: pointer;
-    transition: 0.45s;
-    border: 1.5px solid gray;
+}
+
+#maCarte {
+    display: none;
 }
 
 
+/*  POPUP   */
+
+.popupTitle {
+    font-size: 30px;
+    color: #202020;
+    font-weight: bold;
+}
+.containerPopup {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 250px;
+    margin: 0 auto;
+    color: #202020;
+    background-color: white;
+}
+
+.popTop, .popBot {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.popMidEmail {
+    display: flex;
+    border-color: #202020;
+    border-top: solid 1px #202020;
+    border-bottom: solid 1px #202020;
+    padding: 5px 0;
+}
+
+.popMidTel {
+    display: flex;
+    border-color: #202020;
+    border-bottom: solid 1px #202020;
+    padding: 5px 0;
+}
+
+.popMidEmail p, .popMidTel p {
+    text-align: center;
+}
+
+.popMidEmailLeft, .popMidTelLeft {
+    width: 30%;
+}
+
+.popMidEmailRight, .popMidTelRight {
+    width: 70%;
+}
