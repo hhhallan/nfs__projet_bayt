@@ -7,6 +7,7 @@ App::load();
 
 include ROOT."Config/routeur.php";
 
+
 /**
  * |---------------------------------------------------------------------|
  * |         Model         |        Controller      |        View        |

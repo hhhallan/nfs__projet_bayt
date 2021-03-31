@@ -11,19 +11,12 @@ class HomeController extends Controller {
     {
         $userControllerPro = new UserController();
         $proUsers = $userControllerPro->getAllPro();
-        /*echo '<pre>';
-        print_r($proUsers);
-        echo '</pre>';*/
 
-        /*foreach ($proUsers as $proUser) {
-            echo $proUser->prenom;
-            echo $proUser->nom;
-            echo $proUser->email;
-            echo $proUser->tel_fixe;
-        }*/
+        $logged = $userControllerPro->isLogged();
 
         $this->render("home", [
-            "proUsers" => $proUsers
+            "proUsers" => $proUsers,
+            "logged" => $logged
         ]);
     }
 
@@ -33,6 +26,14 @@ class HomeController extends Controller {
 
     public function us() {
         $this->render('us');
+    }
+
+    public function sign() {
+        $this->render('sign');
+    }
+
+    public function log() {
+        $this->render('log');
     }
 }
 
