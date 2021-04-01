@@ -67,8 +67,12 @@ switch ($page) {
         $user->logout();
         break;
     case 'map':
-        $user = new LocalisationController();
-        $user->showJson();
+        $loc = new LocalisationController();
+        $loc->showJson();
+        break;
+    case 'single':
+        $single = new UserController();
+        $single->single($_GET);
         break;
     default:
         require '../App/Views/default.php';

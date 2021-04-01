@@ -15,6 +15,15 @@ class UserController extends Controller
         $this->userModelPro = new UserModelPro();
     }
 
+    public function single($data) {
+        $user = $this->userModelPro->ReadOne($data['id']);
+
+        $this->render('single', [
+            'data' => $data,
+            'user' => $user
+        ]);
+    }
+
     public function signup_parent($data)
     {
         $success = false;

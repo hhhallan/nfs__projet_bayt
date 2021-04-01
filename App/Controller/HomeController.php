@@ -35,5 +35,7 @@ class HomeController extends Controller {
     public function log() {
         $this->render('log');
     }
+
+
 }
 

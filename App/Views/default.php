@@ -26,6 +26,21 @@ function isLoggedPro()
         }
     }
     return false;
+}
+
+function isLoggedParent()
+{
+    if (!empty($_SESSION['user'])) {
+        if (!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+            if (!empty($_SESSION['user']['email'])) {
+                if ($_SESSION['user']['role'] == 'parent')
+                    if (!empty($_SESSION['user']['ip']) && $_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+                        return true;
+                    }
+            }
+        }
+    }
+    return false;
 } ?>
 
 <!DOCTYPE html>
@@ -65,6 +80,10 @@ function isLoggedPro()
 
             if (isLoggedPro()) { ?>
                 <a href="index.php?page=show">Localisation</a>
+            <?php }
+
+            if (isLoggedParent()) { ?>
+                <a href="">Mes Enfants</a>
             <?php } ?>
 
         </div>

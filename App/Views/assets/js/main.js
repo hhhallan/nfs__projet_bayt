@@ -135,7 +135,7 @@ $.ajax({ // On récupère les infos en BDD
                 customPopup +=        '</div>';
                 customPopup +=      '</div>';
                 customPopup +=      '<div class="popBot">';
-                customPopup +=        '<a href="#">voir plus</a>';
+                customPopup +=        '<a href="index.php?page=single&id='+e.id+'">voir plus</a>';
                 customPopup +=      '</div>';
                 customPopup +=    '</div>';
 
