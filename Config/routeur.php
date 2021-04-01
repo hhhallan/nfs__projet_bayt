@@ -38,6 +38,10 @@ switch ($page) {
         $auth = new HomeController();
         $auth->log();
         break;
+    case 'dashboard':
+        $auth = new HomeController();
+        $auth->dash();
+        break;
     case 'registration_parent':
         $user = new UserController();
         $user->signup_parent($_POST);
@@ -82,6 +86,8 @@ switch ($page) {
 
 
     default:
+       /* $home = new HomeController();
+        $home->default();*/
         require '../App/Views/default.php';
         break;
 }

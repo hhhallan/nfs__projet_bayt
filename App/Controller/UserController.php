@@ -294,4 +294,34 @@ class UserController extends Controller
         }
         return false;
     }
+
+    public function isLoggedPro()
+    {
+        if (!empty($_SESSION['user'])) {
+            if (!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+                if (!empty($_SESSION['user']['email'])) {
+                    if ($_SESSION['user']['role'] == 'creche' || $_SESSION['user']['role'] == 'assistantemater' || $_SESSION['user']['role'] == 'babysitter')
+                        if (!empty($_SESSION['user']['ip']) && $_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+                            return true;
+                        }
+                }
+            }
+        }
+        return false;
+    }
+
+    public function isLoggedParent()
+    {
+        if (!empty($_SESSION['user'])) {
+            if (!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+                if (!empty($_SESSION['user']['email'])) {
+                    if ($_SESSION['user']['role'] == 'parent')
+                        if (!empty($_SESSION['user']['ip']) && $_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+                            return true;
+                        }
+                }
+            }
+        }
+        return false;
+    }
 }

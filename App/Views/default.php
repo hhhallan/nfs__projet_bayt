@@ -79,7 +79,7 @@ function isLoggedParent()
             <?php }
 
             if (isLoggedPro()) { ?>
-                <a href="index.php?page=show">Localisation</a>
+                <a href="index.php?page=dashboard">Dashboard</a>
             <?php }
 
             if (isLoggedParent()) { ?>

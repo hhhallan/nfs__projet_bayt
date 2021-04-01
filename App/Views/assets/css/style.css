@@ -231,6 +231,57 @@ h1 {
     text-align: center;
 }
 
+.containerAuth{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btnparent{
+    margin-top: 75px;
+    color: white;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+    border: 1.5px solid gray;
+    user-select: none;
+}
+
+.btnparent:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btnpro{
+    margin-top: 75px;
+    color: white;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+    border: 1.5px solid gray;
+    user-select: none;
+}
+
+.btnpro:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+
 /*  CARTE / LEGENDE */
 
 #legende {
@@ -323,4 +374,40 @@ h1 {
 
 .popMidEmailRight, .popMidTelRight {
     width: 70%;
+}
+
+
+
+/*  MOBILE  */
+/* Mobile first */
+@media screen and (min-width: 375px) {
+
+    .wrap_dashboard{
+        margin: 0 auto;
+    }
+    .text_dashboard{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .boutons{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .boutons a{
+        background-color: white;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        margin: 15px;
+        padding: 20px;
+        width: 200px;
+        border-radius: 30px;
+    }
+    .boutons a:hover{
+        background-color: grey;
+        transition: 0.2s;
+
+    }
 }
