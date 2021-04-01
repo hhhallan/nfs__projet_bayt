@@ -7,6 +7,7 @@
 use App\Controller\HomeController;
 use App\Controller\UserController;
 use App\Controller\LocalisationController;
+use App\Controller\KidController;
 
 /**
  * Si page est vide => on revient sur la home
@@ -41,6 +42,14 @@ switch ($page) {
     case 'dashboard':
         $auth = new HomeController();
         $auth->dash();
+        break;
+    case 'kid':
+        $auth = new KidController();
+        $auth->addKid($_POST);
+        break;
+    case 'all_kid':
+        $kid = new KidController();
+        $kid->getAllKid();
         break;
     case 'registration_parent':
         $user = new UserController();
@@ -86,8 +95,8 @@ switch ($page) {
 
 
     default:
-       /* $home = new HomeController();
-        $home->default();*/
+        /* $home = new HomeController();
+         $home->default();*/
         require '../App/Views/default.php';
         break;
 }

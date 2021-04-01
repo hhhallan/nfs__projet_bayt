@@ -11,7 +11,8 @@
                 <a href="#" class="tuile">Planning</a>
                 <a href="index.php?page=show" class="tuile">Localisation</a>
             <?php } else if ($loggedParent === true) { ?>
-            <a href="#" class="tuile">Mes paiements</a>
+                <a href="index.php?page=all_kid" class="tuile">Mes enfants</a>
+                <a href="#" class="tuile">Mes paiements</a>
             <a href="#" class="tuile">Trouver un garde d'enfant</a>
             <?php } ?>
         </div>

@@ -187,7 +187,7 @@ class UserController extends Controller
                             'ip' => $_SERVER['REMOTE_ADDR'] // ::1
                         );
                         // redirection index.php
-                        header('Location: index.php');
+                        header('Location: index.php?page=dashboard');
 //                        die();
                     } else {
                         $errors['login'] = 'Le mot de passe et l\'email ne correspondent pas.';
@@ -305,7 +305,7 @@ class UserController extends Controller
                             'ip' => $_SERVER['REMOTE_ADDR'] // ::1
                         );
                         // redirection index.php
-                        header('Location: index.php');
+                        header('Location: index.php?page=dashboard');
 //                        die();
                     } else {
                         $errors['login'] = 'Le mot de passe et l\'email ne correspondent pas.';

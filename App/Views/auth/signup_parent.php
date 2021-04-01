@@ -36,10 +36,5 @@
     <input type="password" name="password_confirm" id="password_confirm">
     <span class="error"><?php if(!empty($errors['password_confirm'])) { echo $errors['password_confirm']; } ?></span>
 
-    <!--    LOCALISATION     -->
-
-
-
-    <!--    <input type="submit" id="submit" value="S'inscrire">-->
     <button> S'inscrire </button>
 </form>
