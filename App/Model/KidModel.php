@@ -10,12 +10,12 @@ use Core\Model\Model;
  * @method create($data) | Enregistre un utilisateur dans la BDD
  * @method getIdByMail(string $string) | Récupère l'id d'un utilisateur en fonction de son email
  */
-class LocalisationModel extends Model{
+class KidModel extends Model{
 
     /**
      * Nom de la table
      *
      * @var string
      */
-    protected $table = "user_pro";
+    protected $table = "enfants";
 }

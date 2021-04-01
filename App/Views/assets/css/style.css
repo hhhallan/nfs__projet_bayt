@@ -65,6 +65,14 @@ a {
     text-decoration: none;
 }
 
+button, input {
+    border: none;
+}
+button:focus, input:focus {
+    border: none;
+    outline: none;
+}
+
 .headercontainer {
     display: flex;
     margin-top: 60px;
@@ -154,7 +162,6 @@ h1 {
     width: 120px;
     text-align: center;
     text-decoration: none;
-    color: white;
     font-weight: bold;
     background-color: #202020;
     padding: 8px;
@@ -282,6 +289,8 @@ h1 {
 }
 
 
+
+
 /*  CARTE / LEGENDE */
 
 #legende {
@@ -374,6 +383,122 @@ h1 {
 
 .popMidEmailRight, .popMidTelRight {
     width: 70%;
+}
+
+
+
+/*  CONNEXION   */
+.formcontainerCO{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formtitle{
+    margin-bottom: 30px;
+}
+
+.email input, .password input{
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 35px;
+    width: 250px;
+    text-align: center;
+}
+
+.formcontainerCO label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+    user-select: none;
+}
+/*  AJOUT ENFANT    */
+.formcontainer{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcontainer label{
+    user-select: none;
+    font-weight: bold;
+}
+
+.emergencytitle{
+    text-align: center;
+    font-weight:600;
+    color: white;
+    font-size: xx-large;
+    user-select: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.formtitle{
+    margin-bottom: 20px;
+}
+
+.names, .health, .emergencypeople, .emergencycontacts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 7.5px;
+    line-height: 1.5;
+}
+
+.nbrchildren, .birthdate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.8;
+}
+
+.nbrchildren input, .birthdate input{
+    width: fit-content;
+    text-align: center;
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+.btnvalidate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submitbtn{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+    font-family: Poppins,sans-serif;
+    cursor: pointer;
+}
+
+.submitbtn:hover{
+    background-color: white;
+    color: black;
+}
+
+.names input, .health input, .emergencypeople input, .emergencycontacts input{
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
 }
 
 
