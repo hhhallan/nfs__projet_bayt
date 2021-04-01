@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Controller;
 
 use App\Model\UserModelParent;
 use App\Model\UserModelPro;
 use Core\Controller\Controller;
 
-class UserController extends Controller{
+class UserController extends Controller
+{
 
     public function __construct()
     {
@@ -20,11 +22,9 @@ class UserController extends Controller{
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
             $this->userModelParent->create($user);
-
         }
 
         $this->render("auth.signup_parent");
-
     }
 
     public function signup_pro($data)
@@ -34,11 +34,9 @@ class UserController extends Controller{
             $user["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
             $user["role"] = json_encode(['user']);
             $this->userModelPro->create($user);
-
         }
 
         $this->render("auth.signup_pro");
-
     }
 
     public function login($data)
@@ -54,10 +52,8 @@ class UserController extends Controller{
             } else {
                 $error = "Utilisateur ou mot de passe incorrect.";
             }
-            
         }
         $this->render("auth.login");
-
     }
 
     public function logout()
@@ -66,11 +62,28 @@ class UserController extends Controller{
         header("Location:index.php");
     }
 
-    public function getAllPro() {
+    public function getAllPro()
+    {
         return $this->userModelPro->ReadAll();
     }
 
-    public function getAllParent() {
+    public function getAllParent()
+    {
         return $this->userModelParent->ReadAll();
+    }
+
+    public function isLoggedUser()
+    {
+        if (!empty($_SESSION['user'])) {
+            if (!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+                if (!empty($_SESSION['user']['nom'])) {
+                    if (!empty($_SESSION['user']['role'])) {
+                        if ($_SESSION['user']['role'] == 'user') {
+                        }
+                    }
+                }
+            }
+        }
+        return false;
     }
 }

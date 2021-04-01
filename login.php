@@ -1,9 +1,9 @@
 <?php
 session_start();
-include '../../../includes/Database.php';
+include 'includes/Database.php';
 
 ?>
-<form action="../../../public/index.php?page=login" method="post">
+<form action="public/index.php?page=login" method="post">
     <h1>Connexion</h1>
     <?php if (isset($error)) { ?> <p style="color: red;"><?= $error ?></p> <?php } ?>
     <?php if (isset($success)) { ?> <p style="color: green;"><?= $success ?></p> <?php } ?>

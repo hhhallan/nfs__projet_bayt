@@ -1,3 +1,23 @@
+<?php 
+
+include '../Core/Test/Func.php';
+
+function isLoggedUser()
+{
+    if (!empty($_SESSION['user'])) {
+        if (!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+            if (!empty($_SESSION['user']['nom'])) {
+                if (!empty($_SESSION['user']['role'])) {
+                    if ($_SESSION['user']['role'] == 'user') {
+                    }
+                }
+            }
+        }
+    }
+    return false;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,7 +46,12 @@
         <a class="navlink" href="index.php?page=us">L'équipe</a>
     </div>
     <div>
-        <a id="loginbtn" class="navlink" href="">Log in / Sign up</a>
+    <?php if(isLoggedUser()) { ?>
+        <li><a href="">Déconnexion</a></li>
+        <?php } else { ?>
+        <a id="loginbtn" class="navlink" href="../login.php">Log in</a>
+        <a id="loginbtn" class="navlink" href="../signup_parent.php">Sign up</a>
+        <?php } ?>
     </div>
 </header>
 

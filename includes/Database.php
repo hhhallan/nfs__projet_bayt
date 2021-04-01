@@ -54,4 +54,20 @@ class Database {
       $req->closeCursor();
       return $count;
     }
+
+    
+public function isLoggedUser()
+{
+  if(!empty($_SESSION['user'])) {
+    if(!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+      if(!empty($_SESSION['user']['nom'])) {
+        if(!empty($_SESSION['user']['role'])) {
+          if($_SESSION['user']['role'] == 'user') {
+          }
+        }
+      }
+    }
+  }
+  return false;
+}
 }     
