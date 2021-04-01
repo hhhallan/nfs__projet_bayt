@@ -103,15 +103,22 @@ h1 {
     color: black;
 }
 
-h2 {
+.titleHome {
     margin: 0 auto;
     margin-top: 130px;
-    /* margin-left: 570px; */
     width: fit-content;
-    line-height: 2;
+    line-height: 1.5;
     font-size: x-large;
-    font-weight: bold;
     user-select: none;
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+.little{
+    font-size: 13px;
+    opacity: 70%;
 }
 
 .container {
@@ -162,6 +169,69 @@ h2 {
     background-color: white;
     cursor: pointer;
 }
+
+/*  PAGE SINGLE */
+
+.presentation span{
+    user-select: none;
+    text-decoration: underline;
+}
+
+.hoverSingle{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+    user-select: initial;
+}
+
+.hoverSingle:hover{
+    color: white;
+}
+.presentation h3{
+    font-size: 22px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.presentation h2{
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 10px;
+    user-select: none;
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-top: 70px;
+}
+
+.infocontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-top: 70px;
+    flex: 1;
+}
+
+.creche{
+    margin-top: 45px;
+    width: 500px;
+}
+
+/* FORM INSCRIPTION / CONNEXION */
+#role{
+    text-align: center;
+}
+.optSelect {
+    text-align: center;
+}
+
+/*  CARTE / LEGENDE */
 
 #legende {
     display: none;

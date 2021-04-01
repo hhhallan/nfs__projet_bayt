@@ -28,7 +28,6 @@ btnSearch.addEventListener('click', function () { // Quand on click sur "Rechech
             carte.setView([latSearch, lonSearch], 14); // La vue de la carte est définie en fonction de la latitude et longitude de l'adresse rentrée.
         })
 
-    //console.log(select.value) // Affiche la valeur du select
     /*switch (select.value) {
         case 'selectA':
             break
@@ -40,9 +39,6 @@ btnSearch.addEventListener('click', function () { // Quand on click sur "Rechech
             break
         default: null;
     }*/
-    /* if (select.value === selectA) { on affiche les assistantes maternelle }
-    * if (select.value === selectB) { on affiche les baby-sitter }
-    * if (select.value === selectC) { on affiche les crèche } */
 })
 
 

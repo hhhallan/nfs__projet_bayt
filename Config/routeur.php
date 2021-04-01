@@ -70,10 +70,17 @@ switch ($page) {
         $loc = new LocalisationController();
         $loc->showJson();
         break;
-    case 'single':
+
+    case 'single-show': // Récupération des infos de l'utilisateur grâce à son ID
         $single = new UserController();
-        $single->single($_GET);
+        $single->showJson();
         break;
+    case 'single': // Affichage des infos de l'utilisateur grâce à AJAX
+        $single = new UserController();
+        $single->showSingle($_GET);
+        break;
+
+
     default:
         require '../App/Views/default.php';
         break;

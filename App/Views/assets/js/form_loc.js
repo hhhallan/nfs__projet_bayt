@@ -19,7 +19,7 @@ btn.addEventListener('click', function () {
                     lon: data[0].lon
                 },
                 success: function (e) {
-                    console.log('success');
+                    // console.log('success');
                     window.location = 'index.php'
                 },
                 error: function () {

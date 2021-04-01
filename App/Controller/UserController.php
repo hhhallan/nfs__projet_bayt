@@ -15,11 +15,21 @@ class UserController extends Controller
         $this->userModelPro = new UserModelPro();
     }
 
-    public function single($data) {
-        $user = $this->userModelPro->ReadOne($data['id']);
+    public function showJson()
+    {
+        $data = $this->userModelPro->ReadOne($data['id']);
+        header("content-type: application/json");
+        $json = json_encode($data, JSON_PRETTY_PRINT);
+        if ($json) {
+            die($json);
+        } else {
+            die('error in json encoding');
+        }
+    }
 
-        $this->render('single', [
-            'data' => $data,
+    public function showSingle($data) {
+        $user = $this->userModelPro->ReadOne($data['id']);
+        $this->render('single',[
             'user' => $user
         ]);
     }
