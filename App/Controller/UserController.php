@@ -15,11 +15,21 @@ class UserController extends Controller
         $this->userModelPro = new UserModelPro();
     }
 
-    public function single($data) {
-        $user = $this->userModelPro->ReadOne($data['id']);
+    public function showJson()
+    {
+        $data = $this->userModelPro->ReadOne($data['id']);
+        header("content-type: application/json");
+        $json = json_encode($data, JSON_PRETTY_PRINT);
+        if ($json) {
+            die($json);
+        } else {
+            die('error in json encoding');
+        }
+    }
 
-        $this->render('single', [
-            'data' => $data,
+    public function showSingle($data) {
+        $user = $this->userModelPro->ReadOne($data['id']);
+        $this->render('single',[
             'user' => $user
         ]);
     }
@@ -279,6 +289,36 @@ class UserController extends Controller
                     if (!empty($_SESSION['user']['ip']) && $_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
                         return true;
                     }
+                }
+            }
+        }
+        return false;
+    }
+
+    public function isLoggedPro()
+    {
+        if (!empty($_SESSION['user'])) {
+            if (!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+                if (!empty($_SESSION['user']['email'])) {
+                    if ($_SESSION['user']['role'] == 'creche' || $_SESSION['user']['role'] == 'assistantemater' || $_SESSION['user']['role'] == 'babysitter')
+                        if (!empty($_SESSION['user']['ip']) && $_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+                            return true;
+                        }
+                }
+            }
+        }
+        return false;
+    }
+
+    public function isLoggedParent()
+    {
+        if (!empty($_SESSION['user'])) {
+            if (!empty($_SESSION['user']['id']) && is_numeric($_SESSION['user']['id'])) {
+                if (!empty($_SESSION['user']['email'])) {
+                    if ($_SESSION['user']['role'] == 'parent')
+                        if (!empty($_SESSION['user']['ip']) && $_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+                            return true;
+                        }
                 }
             }
         }

@@ -21,7 +21,6 @@ class LocalisationController extends Controller
 
     public function insert($data)
     {
-        var_dump($data);
         $lat = $data['lat'];
         $lon = $data['lon'];
         if (!empty($lat) && !empty($lon)) {
@@ -29,7 +28,6 @@ class LocalisationController extends Controller
 
             if (is_numeric($lat) && is_numeric($lon)) {
 
-                var_dump($lat);
                 $this->locaModel->update($loca);
             }
         }

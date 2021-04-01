@@ -1,4 +1,3 @@
-<!--<form id="loca_form" action="ajax/localisation_insert.php" method="post">-->
 <div>
 
     <label for="adresse">Adresse</label>
@@ -13,4 +12,3 @@
     <button id="btn">Enregistrer</button>
 
 </div>
-<!--</form>-->
