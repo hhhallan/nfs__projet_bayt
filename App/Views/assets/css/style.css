@@ -1,0 +1,642 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* STYLE DU SITE */
+
+body {
+    background-color: #C0C2DB;
+    font-family: Poppins, sans-serif;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input {
+    border: none;
+}
+button:focus, input:focus {
+    border: none;
+    outline: none;
+}
+
+.headercontainer {
+    display: flex;
+    margin-top: 60px;
+}
+
+.headercontent {
+    display: flex;
+    justify-content: center;
+    width: 33.3333%;
+    align-items: center;
+}
+
+img {
+    width: 3em;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: xxx-large;
+    user-select: none;
+    color: white;
+}
+
+.login {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+}
+
+.login:hover {
+    background-color: white;
+    color: black;
+}
+
+.titleHome {
+    margin: 0 auto;
+    margin-top: 130px;
+    width: fit-content;
+    line-height: 1.5;
+    font-size: x-large;
+    user-select: none;
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+.little{
+    font-size: 13px;
+    opacity: 70%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sitter-select {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1.5px solid gray;
+}
+
+#location-search {
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px;
+    border: 1.5px solid gray;
+}
+
+.btnsearch {
+    margin-top: 75px;
+    color: white;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+    border: 1.5px solid gray;
+    user-select: none;
+}
+
+.btnsearch:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/*  PAGE SINGLE */
+
+.presentation span{
+    user-select: none;
+    text-decoration: underline;
+}
+
+.hoverSingle{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+    user-select: initial;
+}
+
+.hoverSingle:hover{
+    color: white;
+}
+.presentation h3{
+    font-size: 22px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.presentation h2{
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 10px;
+    user-select: none;
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-top: 70px;
+}
+
+.infocontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-top: 70px;
+    flex: 1;
+}
+
+.creche{
+    margin-top: 45px;
+    width: 500px;
+}
+
+/* FORM INSCRIPTION / CONNEXION */
+#role{
+    text-align: center;
+}
+.optSelect {
+    text-align: center;
+}
+
+.containerAuth{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btnparent{
+    margin-top: 75px;
+    color: white;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+    border: 1.5px solid gray;
+    user-select: none;
+}
+
+.btnparent:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btnpro{
+    margin-top: 75px;
+    color: white;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+    border: 1.5px solid gray;
+    user-select: none;
+}
+
+.btnpro:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.error{
+    color: crimson;
+    font-size: 14px;
+}
+
+
+/*  CARTE / LEGENDE */
+
+#legende {
+    display: none;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.color {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cc {
+    width: 30px;
+    height: 15px;
+    border-radius: 5px;
+}
+#legende p {
+    margin-left: 25px;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.red {
+    background-color: crimson;
+}
+
+.violet {
+    background-color: #bc47bc;
+}
+
+#maCarte {
+    display: none;
+    height: 700px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+/*  POPUP   */
+
+.popupTitle {
+    font-size: 30px;
+    color: #202020;
+    font-weight: bold;
+}
+
+.containerPopup {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 250px;
+    margin: 0 auto;
+    color: #202020;
+    background-color: white;
+}
+
+.popTop, .popBot {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.popMidEmail {
+    display: flex;
+    border-color: #202020;
+    border-top: solid 1px #202020;
+    border-bottom: solid 1px #202020;
+    padding: 5px 0;
+}
+
+.popMidTel {
+    display: flex;
+    border-color: #202020;
+    border-bottom: solid 1px #202020;
+    padding: 5px 0;
+}
+
+.popMidEmail p, .popMidTel p {
+    text-align: center;
+}
+
+.popMidEmailLeft, .popMidTelLeft {
+    width: 30%;
+}
+
+.popMidEmailRight, .popMidTelRight {
+    width: 70%;
+}
+
+
+
+/*  CONNEXION   */
+.formcontainerCO{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formtitle{
+    margin-bottom: 30px;
+}
+
+.email input, .password input{
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 35px;
+    width: 250px;
+    text-align: center;
+}
+
+.formcontainerCO label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+    user-select: none;
+}
+/*  AJOUT ENFANT    */
+.formcontainer{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcontainer label{
+    user-select: none;
+    font-weight: bold;
+}
+
+.emergencytitle{
+    text-align: center;
+    font-weight:600;
+    color: white;
+    font-size: xx-large;
+    user-select: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.formtitle{
+    margin-bottom: 20px;
+}
+
+.names, .health, .emergencypeople, .emergencycontacts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 7.5px;
+    line-height: 1.5;
+}
+
+.nbrchildren, .birthdate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.8;
+}
+
+.nbrchildren input, .birthdate input{
+    width: fit-content;
+    text-align: center;
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+.btnvalidate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submitbtn{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+    font-family: Poppins,sans-serif;
+    cursor: pointer;
+}
+
+.submitbtn:hover{
+    background-color: white;
+    color: black;
+}
+
+.names input, .health input, .emergencypeople input, .emergencycontacts input{
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+/*  INSCRIPTION */
+.selectPro{
+padding: 6px;
+border-radius: 5px;
+border: 1.5px solid gray;
+}
+.formcontainerparents{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcontainerparents input{
+    width: 225px;
+    text-align: center;
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+.formcontainerparents label {
+    user-select: none;
+    font-weight: bold;
+}
+
+.parentnames, .parentphones, .parentadresses, .parentcityzip, .parentpasswords{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 7.5px;
+    line-height: 2;
+}
+
+.parentemail, .moreinfoparent, .parentsignupbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 0.8;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.parentsignup{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.45s;
+    cursor: pointer;
+}
+
+.parentsignup:hover{
+    background-color: white;
+    color: black;
+}
+
+/*  TABLEAU ENFANTS */
+.linkTableau{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.linkTableau a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+
+}
+
+table {
+    margin: 50px;
+    width: auto;
+    background-color: white;
+    border-radius: 8px;
+    border:     collapse;
+}
+table tr th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom:  1px solid black;
+}
+
+table tr td{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+th, td {
+    border-right: 1px solid black;
+}
+
+
+/*  MOBILE  */
+/* Mobile first */
+@media screen and (min-width: 375px) {
+
+    .wrap_dashboard{
+        margin: 0 auto;
+    }
+    .text_dashboard{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .boutons{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .boutons a{
+        background-color: white;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        margin: 15px;
+        padding: 20px;
+        width: 200px;
+        border-radius: 30px;
+    }
+    .boutons a:hover{
+        background-color: grey;
+        transition: 0.2s;
+
+    }
+}
