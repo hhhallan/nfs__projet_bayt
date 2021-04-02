@@ -567,7 +567,44 @@ border: 1.5px solid gray;
     color: black;
 }
 
+/*  TABLEAU ENFANTS */
+.linkTableau{
+    margin-top: 50px;
+    margin-left: 100px;
+}
 
+.linkTableau a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    background-color: #202020;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.45s;
+
+}
+
+table {
+    margin: 50px;
+    width: auto;
+    background-color: white;
+    border-radius: 8px;
+    border:     collapse;
+}
+table tr th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom:  1px solid black;
+}
+
+table tr td{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+th, td {
+    border-right: 1px solid black;
+}
 
 
 /*  MOBILE  */
