@@ -4,7 +4,7 @@
 
         <div class="boutons">
 
-            <a href="#" class="tuile">Mon compte</a>
+            <a href="index.php?page=dashboard" class="tuile">Mon compte</a>
 
             <?php if ($loggedPro === true) { ?>
                 <a href="#" class="tuile">Mes factures</a>
@@ -13,7 +13,7 @@
             <?php } else if ($loggedParent === true) { ?>
                 <a href="index.php?page=all_kid" class="tuile">Mes enfants</a>
                 <a href="#" class="tuile">Mes paiements</a>
-            <a href="#" class="tuile">Trouver un garde d'enfant</a>
+            <a href="index.php" class="tuile">Trouver un garde d'enfant</a>
             <?php } ?>
         </div>
     </div>
