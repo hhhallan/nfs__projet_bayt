@@ -7,18 +7,7 @@ use Core\Controller\Controller;
 class HomeController extends Controller
 {
 
-    /*public function default()
-    {
-        $userControllerPro = new UserController();
-        $logged = $userControllerPro->isLogged();
-        $loggedPro = $userControllerPro->isLoggedPro();
-        $loggedParent = $userControllerPro->isLoggedParent();
-        $this->render('default', [
-            'logged' => $logged,
-            'loggedPro' => $loggedPro,
-            'loggedParent' => $loggedParent
-        ]);
-    }*/
+
 
     public function home()
     {

@@ -83,7 +83,7 @@ class KidController extends Controller
                 $kid['user_id'] = $user_id;
                 // insertion BDD
                 $this->kidModel->create($kid);
-                header('Location: index.php?page=dashboard');
+                header('Location: index.php?page=all_kid');
             }
         }
         $this->render("kid", [
