@@ -68,6 +68,7 @@ a {
 button, input {
     border: none;
 }
+
 button:focus, input:focus {
     border: none;
     outline: none;
@@ -121,10 +122,11 @@ h1 {
     text-align: center;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
-.little{
+
+.little {
     font-size: 13px;
     opacity: 70%;
 }
@@ -179,12 +181,12 @@ h1 {
 
 /*  PAGE SINGLE */
 
-.presentation span{
+.presentation span {
     user-select: none;
     text-decoration: underline;
 }
 
-.hoverSingle{
+.hoverSingle {
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -192,23 +194,25 @@ h1 {
     user-select: initial;
 }
 
-.hoverSingle:hover{
+.hoverSingle:hover {
     color: white;
 }
-.presentation h3{
+
+.presentation h3 {
     font-size: 22px;
     font-weight: bold;
     user-select: none;
 }
 
-.presentation h2{
+.presentation h2 {
     font-size: 20px;
     text-decoration: underline;
     font-weight: bold;
     margin-bottom: 10px;
     user-select: none;
 }
-.presentation{
+
+.presentation {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,7 +220,7 @@ h1 {
     margin-top: 70px;
 }
 
-.infocontainer{
+.infocontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,27 +229,29 @@ h1 {
     flex: 1;
 }
 
-.creche{
+.creche {
     margin-top: 45px;
     width: 500px;
 }
 
 /* FORM INSCRIPTION / CONNEXION */
-#role{
+#role {
     text-align: center;
 }
+
 .optSelect {
     text-align: center;
 }
 
-.containerAuth{
+.containerAuth {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.btnparent{
+
+.btnparent {
     margin-top: 75px;
     color: white;
     width: 120px;
@@ -261,13 +267,13 @@ h1 {
     user-select: none;
 }
 
-.btnparent:hover{
+.btnparent:hover {
     color: black;
     background-color: white;
     cursor: pointer;
 }
 
-.btnpro{
+.btnpro {
     margin-top: 75px;
     color: white;
     width: 120px;
@@ -282,13 +288,13 @@ h1 {
     user-select: none;
 }
 
-.btnpro:hover{
+.btnpro:hover {
     color: black;
     background-color: white;
     cursor: pointer;
 }
 
-.error{
+.error {
     color: crimson;
     font-size: 14px;
 }
@@ -314,6 +320,7 @@ h1 {
     height: 15px;
     border-radius: 5px;
 }
+
 #legende p {
     margin-left: 25px;
 }
@@ -389,9 +396,8 @@ h1 {
 }
 
 
-
 /*  CONNEXION   */
-.formcontainerCO{
+.formcontainerCO {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
@@ -399,11 +405,11 @@ h1 {
     align-items: center;
 }
 
-.formtitle{
+.formtitle {
     margin-bottom: 30px;
 }
 
-.email input, .password input{
+.email input, .password input {
     border-radius: 25px;
     padding: 6px;
     font-weight: bold;
@@ -413,7 +419,7 @@ h1 {
     text-align: center;
 }
 
-.formcontainerCO label{
+.formcontainerCO label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,8 +428,9 @@ h1 {
     font-size: large;
     user-select: none;
 }
+
 /*  AJOUT ENFANT    */
-.formcontainer{
+.formcontainer {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -431,14 +438,14 @@ h1 {
     align-items: center;
 }
 
-.formcontainer label{
+.formcontainer label {
     user-select: none;
     font-weight: bold;
 }
 
-.emergencytitle{
+.emergencytitle {
     text-align: center;
-    font-weight:600;
+    font-weight: 600;
     color: white;
     font-size: xx-large;
     user-select: none;
@@ -446,11 +453,11 @@ h1 {
     margin-bottom: 25px;
 }
 
-.formtitle{
+.formtitle {
     margin-bottom: 20px;
 }
 
-.names, .health, .emergencypeople, .emergencycontacts{
+.names, .health, .emergencypeople, .emergencycontacts {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -458,14 +465,14 @@ h1 {
     line-height: 1.5;
 }
 
-.nbrchildren, .birthdate{
+.nbrchildren, .birthdate {
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 0.8;
 }
 
-.nbrchildren input, .birthdate input{
+.nbrchildren input, .birthdate input {
     width: fit-content;
     text-align: center;
     border-radius: 25px;
@@ -474,13 +481,13 @@ h1 {
     border: none;
 }
 
-.btnvalidate{
+.btnvalidate {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.submitbtn{
+.submitbtn {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -488,16 +495,16 @@ h1 {
     padding: 8px;
     border-radius: 8px;
     transition: 0.45s;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     cursor: pointer;
 }
 
-.submitbtn:hover{
+.submitbtn:hover {
     background-color: white;
     color: black;
 }
 
-.names input, .health input, .emergencypeople input, .emergencycontacts input{
+.names input, .health input, .emergencypeople input, .emergencycontacts input {
     border-radius: 25px;
     padding: 6px;
     font-weight: bold;
@@ -505,12 +512,29 @@ h1 {
 }
 
 /*  INSCRIPTION */
-.selectPro{
-padding: 6px;
-border-radius: 5px;
-border: 1.5px solid gray;
+.procompanyname {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
 }
-.formcontainerparents{
+
+.selectProf {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.selectPro {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1.5px solid gray;
+    text-align: center;
+    text-align-last: center;
+}
+
+.formcontainerparents {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -518,7 +542,7 @@ border: 1.5px solid gray;
     align-items: center;
 }
 
-.formcontainerparents input{
+.formcontainerparents input {
     width: 225px;
     text-align: center;
     border-radius: 25px;
@@ -532,7 +556,7 @@ border: 1.5px solid gray;
     font-weight: bold;
 }
 
-.parentnames, .parentphones, .parentadresses, .parentcityzip, .parentpasswords{
+.parentnames, .parentphones, .parentadresses, .parentcityzip, .parentpasswords {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -541,7 +565,7 @@ border: 1.5px solid gray;
     line-height: 2;
 }
 
-.parentemail, .moreinfoparent, .parentsignupbtn{
+.parentemail, .moreinfoparent, .parentsignupbtn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -551,7 +575,7 @@ border: 1.5px solid gray;
     margin-top: 25px;
 }
 
-.parentsignup{
+.parentsignup {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -562,20 +586,20 @@ border: 1.5px solid gray;
     cursor: pointer;
 }
 
-.parentsignup:hover{
+.parentsignup:hover {
     background-color: white;
     color: black;
 }
 
 /*  TABLEAU ENFANTS */
-.linkTableau{
+.linkTableau {
     margin-top: 50px;
     margin-left: 100px;
 }
 
-.linkTableau a{
+.linkTableau a {
     text-decoration: none;
-    color:white;
+    color: white;
     font-weight: bold;
     background-color: #202020;
     padding: 8px;
@@ -589,19 +613,21 @@ table {
     width: auto;
     background-color: white;
     border-radius: 8px;
-    border:     collapse;
-}
-table tr th{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom:  1px solid black;
+    border: collapse;
 }
 
-table tr td{
+table tr th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+table tr td {
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
 }
+
 th, td {
     border-right: 1px solid black;
 }
@@ -611,20 +637,23 @@ th, td {
 /* Mobile first */
 @media screen and (min-width: 375px) {
 
-    .wrap_dashboard{
+    .wrap_dashboard {
         margin: 0 auto;
     }
-    .text_dashboard{
+
+    .text_dashboard {
         text-align: center;
         margin-top: 20px;
     }
-    .boutons{
+
+    .boutons {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
     }
-    .boutons a{
+
+    .boutons a {
         background-color: white;
         text-align: center;
         text-decoration: none;
@@ -634,7 +663,8 @@ th, td {
         width: 200px;
         border-radius: 30px;
     }
-    .boutons a:hover{
+
+    .boutons a:hover {
         background-color: grey;
         transition: 0.2s;
 
