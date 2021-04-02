@@ -97,7 +97,7 @@ h1 {
     color: white;
 }
 
-.login, .dashboardbtn {
+.login, .dashboardbtn, .buttonz {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -106,9 +106,10 @@ h1 {
     border-radius: 8px;
     transition: 0.45s;
     user-select: none;
+    cursor: pointer;
 }
 
-.login:hover,.dashboardbtn:hover {
+.login:hover,.dashboardbtn:hover,.buttonz:hover {
     background-color: white;
     color: black;
 }
@@ -408,6 +409,7 @@ h1 {
 
 .formtitle {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .email input, .password input {
@@ -431,7 +433,7 @@ h1 {
 }
 
 /*  AJOUT ENFANT    */
-.formcontainer {
+.formcontainer, .localisationcontainer {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -439,7 +441,7 @@ h1 {
     align-items: center;
 }
 
-.formcontainer label {
+.formcontainer label, .localisationcontainer label {
     user-select: none;
     font-weight: bold;
 }
@@ -473,7 +475,7 @@ h1 {
     line-height: 0.8;
 }
 
-.nbrchildren input, .birthdate input {
+.nbrchildren input, .birthdate input{
     width: fit-content;
     text-align: center;
     border-radius: 25px;
@@ -607,6 +609,17 @@ h1 {
     border-radius: 8px;
     transition: 0.45s;
 
+}
+
+.localisationcontainer input {
+    width: fit-content;
+    text-align: center;
+    border-radius: 25px;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 table {

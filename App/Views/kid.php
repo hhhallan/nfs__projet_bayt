@@ -85,7 +85,7 @@
 
         <div class="btnvalidate">
 <!--            <input class="submitbtn" type="submit" name="submit" value="Valider">-->
-            <button> Enreigistrer </button>
+            <button class="buttonz"> Enregistrer </button>
         </div>
     </form>
 </div>

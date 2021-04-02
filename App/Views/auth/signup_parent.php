@@ -1,6 +1,6 @@
 <div class="formcontainerparents">
     <form action="index.php?page=registration_parent" method="post">
-        <h1>Inscription</h1>
+        <h1 class="formtitle">Inscription</h1>
 
         <!-- NOM -->
         <div class="parentnames">
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="parentsignupbtn">
-            <button> S'inscrire </button>
+            <button class="buttonz"> S'inscrire </button>
         </div>
     </form>
 </div>

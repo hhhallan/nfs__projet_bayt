@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="loginbtn">
-            <button> Se connecter </button>
+            <button class="buttonz"> Se connecter </button>
         </div>
     </form>
 </div>

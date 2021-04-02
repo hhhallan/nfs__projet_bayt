@@ -1,4 +1,4 @@
-<div class="linkTableau"><a href="index.php?page=kid">Ajouter un enfant</a></div>
+<div class="linkTableau"><a class="buttonz" href="index.php?page=kid">Ajouter un enfant</a></div>
 <table>
     <thead>
     <tr>
