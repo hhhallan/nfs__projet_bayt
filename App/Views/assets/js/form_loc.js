@@ -20,7 +20,7 @@ btn.addEventListener('click', function () {
                 },
                 success: function (e) {
                     // console.log('success');
-                    window.location = 'index.php'
+                    window.location = 'index.php?page=dashboard'
                 },
                 error: function () {
                     alert('Erreur')
