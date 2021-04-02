@@ -97,7 +97,7 @@ h1 {
     color: white;
 }
 
-.login {
+.login, .dashboardbtn {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -105,9 +105,10 @@ h1 {
     padding: 8px;
     border-radius: 8px;
     transition: 0.45s;
+    user-select: none;
 }
 
-.login:hover {
+.login:hover,.dashboardbtn:hover {
     background-color: white;
     color: black;
 }

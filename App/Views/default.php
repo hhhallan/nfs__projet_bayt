@@ -72,8 +72,8 @@ function isLoggedParent()
         </div>
         <div class="headercontent">
             <?php if (isLogged()) { ?>
-                <a class="login" href="index.php?page=logout">DECONNEXION</a>
-                <a href="index.php?page=dashboard">Dashboard</a>
+                <a class="login" href="index.php?page=logout">Déconnexion</a>
+                <a class="dashboardbtn" href="index.php?page=dashboard">Dashboard</a>
             <?php } else { ?>
                 <a class="login" href="index.php?page=log">Se connecter</a>
                 <a class="login" href="index.php?page=sign">S'inscrire</a>
