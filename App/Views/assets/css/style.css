@@ -568,7 +568,7 @@ h1 {
     line-height: 2;
 }
 
-.parentemail, .moreinfoparent, .parentsignupbtn {
+.parentemail, .moreinfoparent, .parentsignupbtn, .loginbtn {
     display: flex;
     flex-direction: column;
     align-items: center;
